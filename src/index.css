@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+html.light body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+html.dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
+
