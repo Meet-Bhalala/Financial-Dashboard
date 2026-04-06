@@ -1,5 +1,7 @@
 # Finance Dashboard UI
 
+🚀 **[Live Demo](https://financial-dashboard-zeta-ashy.vercel.app/dashboard)** — Try it now!
+
 A frontend-only Finance Dashboard built for the assignment scenario of tracking and understanding personal financial activity.
 The app focuses on:
 - clean, responsive dashboard UI
