@@ -6,8 +6,8 @@ export default function RevenueChart({ data }) {
   const isDark = theme === "dark";
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-      <h3 className="mb-4 text-base font-semibold text-slate-900 dark:text-slate-100">Revenue Overview</h3>
+    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-zinc-700 dark:bg-black">
+      <h3 className="mb-4 text-base font-semibold text-slate-900 dark:text-zinc-100">Revenue Overview</h3>
       <div className="h-72">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>

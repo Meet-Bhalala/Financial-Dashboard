@@ -77,4 +77,22 @@ export const recentOrders = [
         status: "Failed" 
         
     },
+    { 
+        id: "#ORD-1294", 
+        customer: "Ethan Scott", 
+        amount: "$310", 
+        status: "Paid" 
+    },
+    { 
+        id: "#ORD-1295", 
+        customer: "Sophia Turner", 
+        amount: "$180", 
+        status: "Pending" 
+    },
+    { 
+        id: "#ORD-1296", 
+        customer: "Olivia Bennett", 
+        amount: "$420", 
+        status: "Paid" 
+    },
 ];

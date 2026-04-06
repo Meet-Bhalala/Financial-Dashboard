@@ -4,6 +4,9 @@ const initialState = {
     theme: localStorage.getItem("theme") || "light",
     sidebarOpen: true,
     mobileSidebarOpen: false,
+    activeTab: "dashboard", // 'dashboard' | 'transactions' | 'insights'
+    modalOpen: false,
+    editingTransaction: null,
 }
 
 const uiSlice = createSlice({
@@ -23,8 +26,19 @@ const uiSlice = createSlice({
         closeMobileSidebar: (state) => {
             state.mobileSidebarOpen = false;
         },
+        setActiveTab: (state, action) => {
+            state.activeTab = action.payload;
+        },
+        openModal: (state, action) => {
+            state.modalOpen = true;
+            state.editingTransaction = action.payload || null;
+        },
+        closeModal: (state) => {
+            state.modalOpen = false;
+            state.editingTransaction = null;
+        },
     },
 });
 
-export const { toggleTheme, toggleSidebar,openMobileSidebar,closeMobileSidebar } = uiSlice.actions;
+export const { toggleTheme, toggleSidebar, openMobileSidebar, closeMobileSidebar, setActiveTab, openModal, closeModal } = uiSlice.actions;
 export default uiSlice.reducer;
