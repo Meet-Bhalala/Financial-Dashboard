@@ -9,7 +9,7 @@ import { openModal } from "../../store/slices/uiSlice";
 
 export default function TransactionTable({ transactions }) {
   const dispatch = useDispatch();
-  const { current: role } = useSelector((s) => s.role);
+  const role = useSelector((s) => s.role.currentRole || s.role.current);
   const { sortBy, sortOrder } = useSelector((s) => s.transactions.filters);
 
   const handleSort = (field) => {

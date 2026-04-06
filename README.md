@@ -121,6 +121,12 @@ Implemented:
 - CSV export
 - Modal-based CRUD interactions
 
+## Deployment
+
+- Deployed on Vercel
+- SPA route handling is configured in `vercel.json` using rewrites to `index.html`
+- Preferred public entry URL: `https://financial-dashboard-zeta-ashy.vercel.app/`
+
 ## Project Structure
 ```text
 src/

@@ -8,7 +8,7 @@ import TransactionTable from "../../components/TransactionTable/TransactionTable
 
 export default function Transactions() {
   const dispatch = useDispatch();
-  const { current: role } = useSelector((s) => s.role);
+  const role = useSelector((s) => s.role.currentRole || s.role.current);
   const { filters } = useSelector((s) => s.transactions);
   const filtered = useSelector(selectFilteredTransactions);
   const expenseCategories = useSelector((state) =>
@@ -59,7 +59,7 @@ export default function Transactions() {
 
   return (
     <div className="space-y-6 p-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-zinc-100">
             Transactions
@@ -68,11 +68,11 @@ export default function Transactions() {
             Manage and track your transactions
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2 sm:justify-end">
           {role === "admin" && (
             <button
               onClick={() => dispatch(openModal())}
-              className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+              className="flex items-center gap-2 whitespace-nowrap rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
             >
               <Plus size={16} /> Add Transaction
             </button>
